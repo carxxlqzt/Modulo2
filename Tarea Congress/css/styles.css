@@ -1,0 +1,36 @@
+.header{
+    font-size:50px;
+
+
+}
+.mail{
+    font-size:20px
+}
+.bg-teal{
+    background-color: var(--light);
+}
+#logo{
+    max-height:70px
+}
+.lupamain{
+    max-height:300px;
+}
+.seccion{
+    padding: 30px 0px 30px 0px ;
+    
+}
+.contAccordion{
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+}
+.accordion > .card{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.tituloAcordeon{
+    font-size: 23px;
+}
+.filter {
+    font-size:20px
+}

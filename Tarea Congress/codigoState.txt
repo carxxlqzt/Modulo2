@@ -1,0 +1,134 @@
+<form action="" onsubmit="return false">
+            <legend>Filter by Party</legend> 
+              <label for="R"> Republicans</label>
+              <input type="checkbox" name="party" value="R" id="R" checked="">
+              <label for="D">Democrats</label>
+              <input type="checkbox" name="party" value="D" id="D" checked="">
+              <label for="ID">Independents</label>
+              <input type="checkbox" name="party" value="ID" id="ID" checked="">
+              <label for="State">Filter by State</label>
+              <select name="State" id="State" class="select">
+               <option value="TN"></option>
+               <option value="NH"></option>
+               <option value="WI"></option>
+               <option value="WY"></option>
+               <option value="MT"></option>
+               <option value="AK"></option>
+               <option value="CO"></option>
+               <option value="CT"></option>
+               <option value="MO"></option>
+               <option value="NJ"></option>
+               <option value="AR"></option>
+               <option value="CA"></option>
+               <option value="OH"></option>
+               <option value="NC"></option>
+               <option value="WA"></option>
+               <option value="MD"></option>
+               <option value="DE"></option>
+               <option value="PA"></option>
+               <option value="GA"></option>
+               <option value="IN"></option>
+               <option value="OK"></option>
+               <option value="MS"></option>
+               <option value="ME"></option>
+               <option value="TX"></option>
+               <option value="MA"></option>
+               <option value="ID"></option>
+               <option value="IL"></option>
+               <option value="NE"></option>
+               <option value="AZ"></option>
+               <option value="MN"></option>
+               <option value="NY"></option>
+               <option value="SC"></option>
+               <option value="IA"></option>
+               <option value="UT"></option>
+               <option value="NM"></option>
+               <option value="ND"></option>
+               <option value="NV"></option>
+               <option value="HI"></option>
+               <option value="SD"></option>
+               <option value="VA"></option>
+               <option value="LA"></option>
+               <option value="VT"></option>
+               <option value="MI"></option>
+               <option value="WV"></option>
+               <option value="KY"></option>
+               <option value="OR"></option>
+               <option value="KS"></option>
+               <option value="FL"></option>
+               <option value="RI"></option>
+               <option value="AL"></option>
+              </select>
+
+
+
+
+<form action="" onsubmit="return false">
+            <legend>Filter by Party</legend> 
+              <label for="R"> Republicans</label>
+              <input type="checkbox" name="party" value="R" id="R" checked="">
+              <label for="D">Democrats</label>
+              <input type="checkbox" name="party" value="D" id="D" checked="">
+              <label for="ID">Independents</label>
+              <input type="checkbox" name="party" value="ID" id="ID" checked="">
+              <label for="State">Filter by State</label>
+              
+              <select name="State" id="State" class="select">
+                <option value="All">TN</option>
+                <option value="TN">NH</option>
+                <option value="NH">WI</option>
+                <option value="WI">WY</option>
+                <option value="WY">MT</option>
+                <option value="MT">AK</option>
+                <option value="AK">CO</option>
+                <option value="CO">CT</option>
+                <option value="CT">MO</option>
+                <option value="MO">NJ</option>
+                <option value="NJ">AR</option>
+                <option value="AR">CA</option>
+                <option value="CA">OH</option>
+                <option value="OH">NC</option>
+                <option value="NC">WA</option>
+                <option value="WA">MD</option>
+                <option value="MD">DE</option>
+                <option value="DE">PA</option>
+                <option value="PA">GA</option>
+                <option value="GA">IN</option>
+                <option value="IN">OK</option>
+                <option value="OK">MS</option>
+                <option value="MS">ME</option>
+                <option value="ME">TX</option>
+                <option value="TX">MA</option>
+                <option value="MA">ID</option>
+                <option value="ID">IL</option>
+                <option value="IL">NE</option>
+                <option value="NE">AZ</option>
+                <option value="AZ">MN</option>
+                <option value="MN">NY</option>
+                <option value="NY">SC</option>
+                <option value="SC">IA</option>
+                <option value="IA">UT</option>
+                <option value="UT">NM</option>
+                <option value="NM">ND</option>
+                <option value="ND">NV</option>
+                <option value="NV">HI</option>
+                <option value="HI">SD</option>
+                <option value="SD">VA</option>
+                <option value="VA">LA</option>
+                <option value="LA">VT</option>
+                <option value="VT">MI</option>
+                <option value="MI">WV</option>
+                <option value="WV">KY</option>
+                <option value="KY">OR</option>
+                <option value="OR">KS</option>
+                <option value="KS">FL</option>
+                <option value="FL">RI</option>
+                <option value="RI">AL</option>
+               </select>
+            </form>
+            </form>
+
+
+
+let Estados= Array.from(document.querySelectorAll("select[name=State]"))
+let valueState = Array.from(Estados[0].map(e=>e.value))
