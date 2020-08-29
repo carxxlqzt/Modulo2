@@ -132,3 +132,10 @@
 
 let Estados= Array.from(document.querySelectorAll("select[name=State]"))
 let valueState = Array.from(Estados[0].map(e=>e.value))
+
+
+
+
+
+ const demo = document.getElementById("senate-data")
+   demo.innerHTML = JSON.stringify(data,null,2)
