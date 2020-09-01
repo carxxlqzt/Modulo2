@@ -37,6 +37,19 @@
 .tableScroll{
         overflow:scroll;
         height:200px;
-        width:80vw;
+       
   
+}
+.header1{
+  position: fixed;
+}
+.tableAtGlance{
+    width:400px;
+   
+}
+.text-right{
+    font-size:26px
+}
+.tableLoyal{
+    width:auto
 }

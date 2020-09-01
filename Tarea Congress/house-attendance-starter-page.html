@@ -9,7 +9,7 @@
     
     
         <body class="container">
-            <header class="col-12">
+            <header class="row">
                 <div class="row col-12 align-items-center">
                     <div class="col-5 col-sm-7 col-md-9 header">
                         <a class="text-dark" href="home-starter-page.html"> <img id="logo" src="img/logoTGIF.png" alt="logoTGIF"> <span class="d-none d-md-inline">TGIF</span></a>
@@ -50,7 +50,7 @@
                           </div>
                           </li>
                           <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-darkref="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle text-dark ref="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                              Party Loyalty
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -64,20 +64,22 @@
                   </nav>
             </header>
     
-        <main class="row col-12 ">
-        <div class="col-12">
+        <main class="row">
+            <div class="row d-flex align-items-center">
+            <div class="col-7">
             <h2>Attendance</h2>
             <p>The Constitution specifies that a majority of members constitutes a quorum to do business in each house. Representatives and senators rarely force the presence of a quorum by demanding quorum calls; thus, in most cases, debates continue even if a majority is not present.</p>
 
             <p>The Senate uses roll-call votes; a clerk calls out the names of all the senators, each senator stating "aye" or "no" when his or her name is announced. The House reserves roll-call votes for the most formal matters, as a roll-call of all 435 representatives takes quite some time; normally, members vote by electronic device. In the case of a tie, the motion in question fails. In the Senate, the Vice President may (if present) cast the tiebreaking vote.</p>
-    	    
-            <h2>House at a glance</h2>
+            </div>
+            <div class="col-5">
+            <h2 class="mt-3 text-right">House at a glance</h2>
             <table class="table" >
                 <thead>
                     <tr>
                         <th>Party</th>
-                        <th>Number of Reps</th>
-                        <th>% Voted with Prty</th>
+                        <th>No. of Reps</th>
+                        <th>% Missed Votes</th>
                     </tr>
                 </thead>
                 <tbody id="tbody" >
@@ -93,10 +95,16 @@
                         <td>Independents</td>
                         
                     </tr>
+                    <tr>
+                        <td>Total</td>
+                    </tr>
                 </tbody>
             </table>
-
-            <h2>Least Engaged (Bottom 10% Attendance)</h2>
+        </div>
+            </div>
+            <div class="row">
+            <div class="col-6">
+            <h3>Least Engaged (Bottom 10% Attendance)</h3>
             <div class="tableScroll">
             <table id="tableAttL" class="table">
                 <thead>
@@ -109,7 +117,9 @@
                
             </table>
             </div>
-            <h2>Most Engaged (Top 10% Attendance)</h2>
+            </div>
+            <div class="col-6">
+            <h3>Most Engaged (Top 10% Attendance)</h3>
             <div class="tableScroll">
             <table id="tableAttM" class="table">
                 <thead>
@@ -122,44 +132,51 @@
                 
             </table>
         </div>
+    </div>
 
-        </div>  
+          </div>
     </main>
-    <footer class="row col-12 d-flex justify-content-center border border-dark p-3">
-        <div>
+    <footer class="row p-0 mt-2">
+        <div class="col-12 d-flex justify-content-center border border-dark p-3">
             <h5>2016 TGIF |&#169;<span class="d-none d-md-inline"> All Rights Reserved</span> </h5>
         </div>
     </footer>
 <script src="house.js"></script>
+<script src="statistics-loyalty-house-senate.js"></script>
+<script src="statistics-attendance-house-senate.js"></script> 
+<!-- <script>
+// let attTableL = document.getElementById("tableAttL")
+// let attTableM = document.getElementById("tableAttM")
 
-<script src="statistics-senate.js"></script> 
-<script>
-let attTableL = document.getElementById("tableAttL")
-let attTableM = document.getElementById("tableAttM")
+// function armadoTablaAttendance (array,table){
+// let tbodyL = document.createElement("tbody")
+// let _array = statistics[array]
+// for (let i = 0; i < _array.length; i++) {
+//  let trL1 = document.createElement("tr")
+//  let tdL1 = document.createElement("td")
+//  let tdL2 = document.createElement("td")  
+//  let tdL3 = document.createElement("td")
+//  tdL1.innerText= _array[i].first_name+' '+(_array[i].middle_name || '')+' '+_array[i].last_name
+//  tdL2.innerText =_array[i].missed_votes
+//  tdL3.innerText =_array[i].missed_votes_pct
+// trL1.appendChild(tdL1)
+// trL1.appendChild(tdL2)
+// trL1.appendChild(tdL3)
+// tbodyL.appendChild(trL1)
 
-function armadoTablaAttendance (array,table){
-let tbodyL = document.createElement("tbody")
-let _array = statistics[array]
-for (let i = 0; i < _array.length; i++) {
- let trL1 = document.createElement("tr")
- let tdL1 = document.createElement("td")
- let tdL2 = document.createElement("td")  
- let tdL3 = document.createElement("td")
- tdL1.innerText= _array[i].first_name+' '+(_array[i].middle_name || '')+' '+_array[i].last_name
- tdL2.innerText =_array[i].missed_votes
- tdL3.innerText =_array[i].missed_votes_pct
-trL1.appendChild(tdL1)
-trL1.appendChild(tdL2)
-trL1.appendChild(tdL3)
-tbodyL.appendChild(trL1)
+// }
+// table.appendChild(tbodyL)
+// }
+// armadoTablaAttendance("leastEnganged",attTableL)
+// armadoTablaAttendance("mostEnganged",attTableM)
+// let tituloA = document.querySelectorAll("div>h2")
+// for (let i = 0; i < tituloA.length; i++) {
+//     tituloA[i].classList.add("mt-4")
+    
+// }
 
-}
-table.appendChild(tbodyL)
-}
-armadoTablaAttendance("leastEnganged",attTableL)
-armadoTablaAttendance("mostEnganged",attTableM)
 
-</script> 
+</script>  -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>

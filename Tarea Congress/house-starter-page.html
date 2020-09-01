@@ -8,7 +8,7 @@
     </head>
     
     <body class="container">
-        <header class="col-12">
+        <header class="row">
             <div class="row col-12 align-items-center">
                 <div class="col-5 col-sm-7 col-md-9 header">
                     <a class="text-dark" href="home-starter-page.html"> <img id="logo" src="img/logoTGIF.png" alt="logoTGIF"> <span class="d-none d-md-inline">TGIF</span></a>
@@ -63,13 +63,13 @@
               </nav>
         </header>
 
-        <main class="col-12">
-            <div class="seccion">
+        <main class="row">
+            <div class="seccion col-12">
                <h2>Congressmen</h2>
                 <p>The major power of the House is to pass federal legislation that affects the entire country, although its bills must also be passed by the Senate and further agreed to by the U.S. President before becoming law (unless both the House and Senate re-pass the legislation with a two-thirds majority in each chamber). The House has some exclusive powers: the power to initiate revenue bills, to impeach officials (impeached officials are subsequently tried in the Senate), and to elect the U.S. President in case there is no majority in the Electoral College.</p>
                 <p>Each U.S. state is represented in the House in proportion to its population as measured in the census, but every state is entitled to at least one representative. </p> 
             </div>   
-            
+            <div class="container col-12" >
            
             <form class="row" action="" onsubmit="return false">
               <div class="col-sm-12 col-md-9 col-lg-10 ">
@@ -140,7 +140,8 @@
               </div>
              
               </form>
-        <div class="tableScroll">
+            </div>
+        <div class="tableScroll mt-4 w-100 ">
         <table class="table" id="house-data" >
          <thead class="thead-dark">
              <tr>
@@ -156,8 +157,8 @@
       </div>
         
         </main>
-        <footer class="row col-12 d-flex justify-content-center border border-dark p-3">
-            <div>
+        <footer class="row p-0 mt-4">
+            <div class="col-12 d-flex justify-content-center border border-dark p-3">
                 <h5>2016 TGIF |&#169;<span class="d-none d-md-inline"> All Rights Reserved</span> </h5>
             </div>
         </footer>
@@ -167,6 +168,7 @@
     <script src="filtros-tablaHouse.js">
       
     </script>
+           <script src="statistics-loyalty-house-senate.js"></script>
           <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
           <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
