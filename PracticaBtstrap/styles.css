@@ -1,0 +1,23 @@
+:root{
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    height: 100vh;
+}
+header, nav,footer{
+    height: 10vh;
+}
+main{
+    height: 70vh;
+}
+table{
+    border-collapse:collapse;
+}
+table, td{
+    border:black solid
+}
+
+.cont-1 *{
+    border: black solid;
+}
+

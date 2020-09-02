@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <title>Senate Loyalty</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -14,7 +15,7 @@
                     <a class="text-dark" href="home-starter-page.html"> <img id="logo" src="img/logoTGIF.png" alt="logoTGIF"> <span class="d-none d-md-inline">TGIF</span></a>
                 </div>
                 <div class="col-7 col-sm-5 col-md-3">
-                    <a class="mail text-dark" href="mailto:info@tgif.net"> <svg class="d-none d-sm-inline" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-envelope" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <a class="mail text-info font-weight-bold" href="mailto:info@tgif.net"> <svg class="d-none d-sm-inline" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-envelope" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
                       </svg> info@tgif.net </a>
                 </div>
@@ -27,11 +28,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                   <ul class="navbar-nav">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="home-starter-page.html">Home <span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                      <a class="nav-link text-info font-weight-bold" href="home-starter-page.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <a class="nav-link dropdown-toggle text-info font-weight-bold" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Congress
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -39,22 +40,22 @@
                         <a class="dropdown-item" href="senate-starter-page.html">Senate</a>                      </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-info font-weight-bold" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           Attendance
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                           <a class="dropdown-item" href="house-attendance-starter-page.html">House</a>
-                          <a class="dropdown-item" href="senate-starter-page.html">Senate</a>  
+                          <a class="dropdown-item" href="senate-attendance-starter.html">Senate</a>  
                                      
                       </div>
                       </li>
                       <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-info font-weight-bold" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                          Party Loyalty
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                           <a class="dropdown-item" href="house-party-loyalty-starter-page.html">House</a>
-                          <a class="dropdown-item" href="#">Senate</a>  
+                          <a class="dropdown-item active" href="#">Senate</a>  
                                      
                       </div>
                       </li>
@@ -62,26 +63,28 @@
                 </div>
               </nav>
         </header>
-        <main class="row">
-        <div class="row d-flex align-items-start">
-            <div class="col-6">
+        <main class="row container"  id="Loyalty">
+        <div class="row d-flex align-items-start mt-4">
+            <div class="col-12 col-md-6">
+               
             <h2>Party Loyalty</h2>
             <p>Those who consider themselves to be strong partisans, strong Democrats and strong Republicans respectively, tend to be the most faithful in voting for their party's nominee for office and legislation that backs their party's agenda. </p>
     	    </div>
             
             
-            <div class="col-6">
+            <div class="col-12 col-md-6 d-flex justify-content-end">
+             <div>
             <h2 class="mt-3 text-right">Senate at a glance</h2>
-            <table id="table">
+            <table id="table"class="table w-auto">
                 <thead>
                     <tr>
                         <th>Party</th>
-                        <th>N° of Reps</th>
+                        <th>No. of Reps</th>
                         <th>% Voted with Party</th>
                     </tr>
                 </thead>
                 
-                <tbody id="tbdy">
+                <tbody id="tbody">
                     <tr>
                         <td>Republicans</td>
                      
@@ -99,13 +102,14 @@
                     </tr>
                 </tbody>   
             </table>
+            </div>
         </div>
         </div>
-            <div class="row">
-            <div class="col-6 tableLoyal">
-            <h3>Least Loyal (Bottom 10% of Party)</h3>
-            <div class="tableScroll">
-            <table id="loyalTable">
+            <div class="row mt-4">
+            <div class="col-12 col-md-6 tableLoyal">
+            <h3 class="titletable">Least Loyal (Bottom 10% of Party)</h3>
+            <div class="tableScroll mt-4">
+            <table id="least"class="table">
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -118,10 +122,10 @@
             </table>
                 </div>
             </div>
-            <div class="col-6 tableLoyal">
-            <h3>Most Loyal (Top 10% of Party)</h3>
-            <div class="tableScroll">
-            <table id="mostLoyal">
+            <div class="col-12 col-md-6 mt-3 mt-md-0 tableLoyal">
+            <h3 class="titletable text-right">Most Loyal (Top 10% of Party)</h3>
+            <div class="tableScroll mt-4">
+            <table id="most" class="table">
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -136,11 +140,12 @@
 
     	   
         </main>
-        <footer class="row p-0 mt-2 ">
+        <footer class="row p-0 mt-4 ">
             <div class="col-12 d-flex justify-content-center border border-dark p-3">
                 <h5>2016 TGIF |&#169;<span class="d-none d-md-inline"> All Rights Reserved</span> </h5>
             </div>
         </footer>
+        
         <script src="senate.js"></script>
         <script src="statistics-loyalty-house-senate.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

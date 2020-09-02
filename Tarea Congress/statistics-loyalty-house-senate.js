@@ -73,16 +73,14 @@ calculoGeneral (members,"votes_with_party_pct","leastLoyal","mostLoyal")
 statistics.mostLoyal.reverse()
 statistics.leastEnganged.reverse()
 
-// Tabla acerca de la cantidad de miembros del partido, y el promedio de sus votos a favor(LOYALTY) o de sus votos perdidos(ATTENDANCE)
+let attendance = document.getElementById("Attendance") 
+let loyalty = document.getElementById("Loyalty")
 let tr1A= document.querySelector("#tbody> tr:first-child")
 let tr2A= document.querySelector("#tbody> tr:nth-child(2n)")
 let tr3A= document.querySelector("#tbody> tr:nth-child(3n)")
 let tr4A =document.querySelector("#tbody> tr:nth-child(4n)")
-let tr1L= document.querySelector("#tbdy> tr:first-child")
-let tr2L= document.querySelector("#tbdy> tr:nth-child(2n)")
-let tr3L= document.querySelector("#tbdy> tr:nth-child(3n)")
-let tr4L= document.querySelector("#tbdy> tr:nth-child(4n)")
-//Función para realizar la tabla para los 2 casos (ATTENDANCE Y LOYALTY)
+
+
 function tablaAtGlance(tr1,tr2,tr3,tr4,key1,key2,key3,key4) {
 let td1 = document.createElement("td")
 let td2 =document.createElement("td")
@@ -109,19 +107,22 @@ td7.innerText = members.length
 let td8 = document.createElement("td")
 td8.innerText= statistics[key4].toFixed(2)
 tr4.appendChild(td7)
-tr4.appendChild(td8)
+tr4.appendChild(td8)}
+
+if(loyalty){
+tablaAtGlance(tr1A,tr2A,tr3A,tr4A,"avgDemocratVotes","avgRepublicansVotes","avgIndependentsVotes","avgTotalVotes")
+}
+else{ tablaAtGlance(tr1A,tr2A,tr3A,tr4A,"avgDemocratsMissedVotes","avgRepublicansMissedVotes","avgIndependentsMissedVotes", "avgTotalMissedVotes")
+
 }
 
-//Llamo a la función para realizar la tabla del promedio de los votos a favor (votes with party pct)
-tablaAtGlance(tr1L,tr2L,tr3L,tr4L,"avgDemocratVotes","avgRepublicansVotes","avgIndependentsVotes","avgTotalVotes")
-
 //Creación de la tabla de los más y menos leales
-let loyalTableL = document.getElementById("loyalTable");
-let loyalTableM = document.getElementById("mostLoyal");
-//Función para realizar la tabla de los más y menos leales
-function armadoTabla (key,table){
+let leastTable = document.getElementById("least");
+let mostTable = document.getElementById("most");
+//Función para realizar la tabla de los MÁS Y MENOS EN LAS 4 PAGINAS
+function armadoTabla (keyA,keyB,table){
 let tbodyL = document.createElement("tbody");
-let _array = statistics[key];
+let _array = statistics[keyA];
 
 for (let i = 0; i < _array.length; i++) {
 let operation = _array[i].total_votes * _array[i].votes_with_party_pct /100
@@ -130,8 +131,9 @@ let operation = _array[i].total_votes * _array[i].votes_with_party_pct /100
  let tdL2 = document.createElement("td");  
  let tdL3 = document.createElement("td");
  tdL1.innerText= _array[i].first_name+' '+(_array[i].middle_name || '')+' '+_array[i].last_name;
- tdL2.innerText = operation.toFixed(2);
- tdL3.innerText =_array[i].votes_with_party_pct;
+ if(loyalty){tdL2.innerText = operation.toFixed(2)}
+ else{tdL2.innerText =_array[i].missed_votes};
+tdL3.innerText =_array[i][keyB];
 trL1.appendChild(tdL1);
 trL1.appendChild(tdL2);
 trL1.appendChild(tdL3);
@@ -140,28 +142,11 @@ tbodyL.appendChild(trL1);
 }
 table.appendChild(tbodyL)
 }
-armadoTabla("leastLoyal",loyalTableL)
-armadoTabla("mostLoyal",loyalTableM)
-
-let tC= document.getElementsByTagName("table")
-for (i =0;i<tC.length;i++){tC[i].classList.add("table")}
-
-let titulos = document.querySelectorAll("div>h2")
-for (let i = 0; i < titulos.length; i++) {
-    titulos[i].classList.add("mt-4")
-    
+if(loyalty){
+armadoTabla("leastLoyal","votes_with_party_pct",leastTable)
+armadoTabla("mostLoyal","votes_with_party_pct",mostTable) 
 }
-// let navLink = document.querySelectorAll(".nav-link")
-// for (let i = 0; i < navLink.length; i++) {
-//     navLink[i].classList.add("text-info");
-let tableAtGlance = document.querySelector("div>table")
-tableAtGlance.classList.add("tableAtGlance")
-
-let h3 = document.getElementsByTagName("h3")
-for (let i = 0; i < h3.length; i++) {
-    h3[i].classList.add("mt-4")}
-let footer = document.getElementsByTagName("footer")
-for (let i = 0; i < footer.length; i++) {
-    footer[i].classList.add("mt-4")
-    
+else{
+armadoTabla("leastEnganged","missed_votes_pct",leastTable)
+armadoTabla("mostEnganged","missed_votes_pct",mostTable)
 }

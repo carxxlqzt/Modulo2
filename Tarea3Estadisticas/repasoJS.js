@@ -66,4 +66,55 @@ let HighestTenPct= sorted[sorted.length - tenPercent];
 least= sorted.filter(member => member<=LowestTenPct)
 most= sorted.filter(member => member >= HighestTenPct )
 
+//
+let num = 30042;
+num = num + "";
+let num2 =4344
+let n3 = num2.toString()
+let palabra = "maquina"
+let palabra2 = palabra.split("").sort().join("")
+//Función para colocarle mayusculas a las primeras letras de las palabras de una frase
+let frase = "hola mi nombre es carolina"
+function toUpperCase (string){
+    let sentence = string.split(" ")
+    let upperCase=[]
+    for (let i = 0; i < sentence.length; i++) {
+     upperCase.push(sentence[i].charAt(0).toUpperCase() + sentence[i].slice(1))
+    }
+    return (upperCase.join(" "))
+}
+let sent = toUpperCase(frase)
+function condicional(a){
+    if(a){
+        console.log("es verdad")
+    }
+    else{
+        console.log("no es verdad")
+    }
+}
+condicional(true)
+function testCondicional(x){
+    y = 0
+    if(x){
+       y+= 10
+    }
+   return y
+}
 
+// Función para calcular de vocales que tiene una frase indicada
+function vowel_count(str1)
+{
+  var vowel_list = 'aeiouAEIOU';
+  var vcount = 0;
+  
+  for(var x = 0; x < str1.length ; x++)
+  {
+    if (vowel_list.indexOf(str1[x]) !== -1)
+    {
+      vcount += 1;
+    }
+  
+  }
+  return vcount;
+}
+console.log(vowel_count("The quick brown fox"));
