@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        
+        body{
+            background-image: url("cork-board-background.png");
+            background-size: cover;
+        }
+
+        body,h1{
+            margin: 0;
+        }
+
+        header{
+            font-family: fantasy;
+            text-align: center;
+            padding: 1.5em;
+            color: whitesmoke;
+            -webkit-text-stroke: 2px black;
+        }
+
+        main section{
+            flex-flow: row wrap;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 3em;
+            width: 100vw;
+        }
+
+        main{
+            display: flex;
+            justify-content: center;
+            
+            padding: 2em;
+        }
+
+        main form{
+            width: 350px;
+        }
+
+        main form fieldset{
+            background-color: rgba(245, 245, 245, .7)
+        }
+
+        main form fieldset{
+            display: flex;
+            flex-direction: column;
+        }
+
+        main section h2{
+            flex-basis: 90%;
+            text-align: center;
+        }
+
+        article{
+            text-align: center;
+            background-color: lightseagreen;
+            width: 200px;
+            height: 200px;
+            padding: .5em;
+            margin: 1em 0;
+            position: relative;
+        }
+
+        /* article::before{
+            content: "";
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            top: .5em;
+            left: 45%;
+            background-color: red;
+            border-radius: 50%;
+        } */
+
+        .close{
+            position: absolute;
+            top: .5em;
+            right: 1em;
+            font-weight: bolder;
+            cursor: pointer;
+            visibility: hidden;
+        }
+
+        article:hover .close{
+            visibility: visible;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Manipulación del DOM con JS</h1>
+    </header>
+    <main>
+        <form onsubmit="crearTarjetaB(event)">
+            <fieldset>
+                <legend>Create a Card</legend>
+                <label>Title:
+                    <input type="text" name="title" id="title">
+                </label>
+                <label for="text-box">Text:</label>
+                <textarea name="text-box" id="text-box" cols="30" rows="5"></textarea>
+                <input type="submit" value="Add">
+                <label >Color:
+                    <input type="color" name="color" id="color">
+                </label>
+            </fieldset>
+        </form>
+        <section id="cards">
+          
+        </section>
+        
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

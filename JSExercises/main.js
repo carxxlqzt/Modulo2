@@ -67,14 +67,16 @@ function showPosition(array,index) {console.log(array[index])}
 
 showPosition(numbers,3)
 console.log("--- EJERCICIO 6---")
+let members= data[0].results[0].members
+
 function hallarRepetidos(ara){
   var repetidos = []
   var objetoAuxiliar={};
   for (var i =0; i < ara.length; i++){
-    if(!objetoAuxiliar[ara[i]]){
-      objetoAuxiliar[ara[i]]=0
+    if(!objetoAuxiliar[ara[i].state]){
+      objetoAuxiliar[ara[i].state]=0
     }
-    objetoAuxiliar[ara[i]]+=1 } 
+    objetoAuxiliar[ara[i].state]+=1 } 
   
   for (propiedad in objetoAuxiliar)
   {if(objetoAuxiliar[propiedad] > 1) {
@@ -82,7 +84,7 @@ function hallarRepetidos(ara){
    }
   }
       return repetidos}
-console.log("Los numeros repetidos son: " + hallarRepetidos(edades))
+console.log("Los numeros repetidos son: " + hallarRepetidos(members))
    
 console.log("---- EJERCICIO 7---")
 var myColor=["Red","Green","White","Black"];

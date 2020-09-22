@@ -1,0 +1,102 @@
+*{
+    font-family: 'Lexend Exa', sans-serif;
+   
+} 
+
+.header{
+    font-size:50px;
+
+}
+
+
+.mail{
+    font-size:20px;
+   
+}
+.bg-teal{
+    background-color: var(--light);
+}
+#logo{
+    max-height:70px
+}
+.lupamain{
+    max-height:300px;
+}
+.seccion{
+    padding: 30px 0px 30px 0px ;
+    
+}
+.contAccordion{
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+}
+.accordion > .card{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.tituloAcordeon{
+    font-size: 23px;
+}
+.filter {
+    font-size:20px
+}
+.tableScroll{
+        overflow:scroll;
+        height:200px;
+        
+       
+  
+}
+.tableScroll::-webkit-scrollbar {
+            width: 8px;     /* Tamaño del scroll en vertical */
+            height: 8px;    /* Tamaño del scroll en horizontal */
+             /* Ocultar scroll */
+        }
+ .tableScroll::-webkit-scrollbar-thumb {
+            background: rgb(130, 185, 248);
+            border-radius: 4px;
+        }
+        /* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.tableScroll::-webkit-scrollbar-thumb:hover {
+            background: #11105c;
+            box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+        }
+        /* Cambiamos el fondo cuando esté en active */
+        .tableScroll::-webkit-scrollbar-thumb:active {
+            background-color:#11105c;
+        }
+        .tableScroll::-webkit-scrollbar-track {
+            background: #f5f3f3;
+            border-radius: 4px;
+        }
+        /* Cambiamos el fondo cuando esté en active o hover */
+        .tableScroll::-webkit-scrollbar-track:hover,
+        .tableScroll::-webkit-scrollbar-track:active {
+          background: #e4e4e4;
+        }
+.header1{
+  position: fixed;
+}
+.tableAtGlance{
+    width:400px;
+   
+}
+.text-right{
+    font-size:26px
+}
+.tableLoyal{
+    width:auto
+}
+.titletable{
+    font-size: 22px;
+}
+.titlecolor *{
+    color:rgb(2, 2, 149) !important;
+   
+
+}
+
+[v-cloak] > * { display:none; }
+[v-cloak]::before { content: "Loading..."; }
+p{font-size:13px}

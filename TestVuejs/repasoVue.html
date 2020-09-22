@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #element{
+            
+            height:50px;
+            margin-right: 3em;
+            margin-top: 3em;
+            
+        }
+        .lila{
+            background-color: rgb(192, 124, 255);
+            box-shadow: cornflowerblue 2px 2px 2px
+        } 
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+<body class="container">
+    <div id="app">
+        <h1 > Bienvenidos </h1>
+        <h3> {{invertido}} </h3>
+        <hr>
+        <button class="btn btn-primary" @click="contador++"> + </button>
+        <button class="btn btn-danger" @click="contador--"> - </button>
+        <h4> {{contador}} </h4>
+        <div class="caja" id="element" :style="{'width':contador + '%'}" :class="color"> </div>
+        <hr>
+        <label for="chooseClothes">Elige tu prenda</label>
+        <select v-model="choosenClothes" name="SelectYourClothes" id="chooseClothes">
+            <option disabled value="">choose your wear</option>
+            <option  v-for="clothes of clothes"  v-bind:value="clothes.name"> {{clothes.name}} </option>
+        </select>
+
+        <span> {{clothes[1].stock}} </span>
+       
+        
+        </div>
+        
+
+    </div>
+    
+    <div id="cont">
+       
+        <label for="coloresFav">Escribe tu color favorito</label>
+        <input type="text" v-model="colorFavorito" @keyup.enter="añadirColor()" name="color-favorito" id="coloresFav">
+        <label for="Color">Paleta de colores</label>
+        <input type="color" name="Color" id="Color" v-model="colorElegido">
+        <button @click="añadirColor()">Añadir a la lista</button>
+        <ul>
+            <li v-for= "todos in todos ">
+            {{ todos.text }}
+            </li>
+           </ul>
+    </div>
+    <div id="container" class="row">
+    <div id="element"></div>
+    </div>
+    <div id="objeto"></div>
+
+    <!-- <table id="table">
+        <thead>
+            <th>Nombre</th>
+            <th>Partido</th>
+        </thead>
+        
+    </table>
+    <table id="tableH">
+        <thead>
+            <th>Nombre</th>
+            <th>Partido</th>
+        </thead>
+        
+    </table> -->
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>   
+    <script src="repasoVue.js"></script>
+</body>
+</html>

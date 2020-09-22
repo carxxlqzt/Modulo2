@@ -1,0 +1,11 @@
+.cargando {
+    background-image: url('../img/cargando.gif');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 30px;
+    height: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  [v-cloak] > * { display:none; }
+[v-cloak]::before { content: "loading..."; }
